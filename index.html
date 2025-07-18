@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#009688">
+    <meta name="description" content="Calcule a velocidade de internet ideal para suas necessidades com base nos seus dispositivos e atividades online.">
+    <title>Descubra quantos megas de internet você precisa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Descubra quantos megas de internet você precisa</h1>
+            <p class="header-description">Selecione suas atividades e dispositivos para calcular a velocidade ideal para sua casa</p>
+            
+            <div class="people-selector">
+                <button class="people-selector-btn" aria-label="Selecionar número de pessoas">
+                    <i class="fas fa-users"></i>
+                    <span class="people-count">1</span>
+                    <span class="people-label">pessoa</span>
+                </button>
+                <div class="people-selector-dropdown">
+                    <div class="people-selector-header">
+                        <h3>Quantas pessoas usam a internet?</h3>
+                    </div>
+                    <div class="people-selector-options">
+                        <button class="people-option" data-value="1">1 pessoa</button>
+                        <button class="people-option" data-value="2">2 pessoas</button>
+                        <button class="people-option" data-value="3">3 pessoas</button>
+                        <button class="people-option" data-value="4">4 pessoas</button>
+                        <button class="people-option" data-value="5">5 pessoas</button>
+                        <button class="people-option" data-value="6">6 pessoas</button>
+                        <button class="people-option" data-value="7">7 pessoas</button>
+                        <button class="people-option" data-value="8">8 pessoas</button>
+                        <button class="people-option" data-value="9">9 pessoas</button>
+                        <button class="people-option" data-value="10">10+ pessoas</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="activities-section">
+                <h2>Suas Atividades Online</h2>
+                <p class="section-description">Selecione as atividades que você realiza e quantos dispositivos usam cada uma delas</p>
+                
+                <div class="cards-grid">
+                    <div class="activity-card">
+                        <div class="card-icon social" aria-hidden="true">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Redes sociais</h3>
+                            <p>Instagram, TikTok, Facebook</p>
+                            <div class="device-counter">
+                                <button class="counter-btn minus" aria-label="Diminuir quantidade de dispositivos para redes sociais">-</button>
+                                <span class="count" role="status" aria-live="polite">1</span>
+                                <button class="counter-btn plus" aria-label="Aumentar quantidade de dispositivos para redes sociais">+</button>
+                                <span class="label">Dispositivos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <div class="card-icon streaming" aria-hidden="true">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Streaming de Vídeo HD+</h3>
+                            <p>Netflix, YouTube, Vivo</p>
+                            <div class="device-counter">
+                                <button class="counter-btn minus" aria-label="Diminuir quantidade de dispositivos para streaming">-</button>
+                                <span class="count" role="status" aria-live="polite">0</span>
+                                <button class="counter-btn plus" aria-label="Aumentar quantidade de dispositivos para streaming">+</button>
+                                <span class="label">Dispositivos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <div class="card-icon gaming" aria-hidden="true">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Jogos Online Multiplayer</h3>
+                            <p>Fortnite, Valorant, PUBG</p>
+                            <div class="device-counter">
+                                <button class="counter-btn minus" aria-label="Diminuir quantidade de dispositivos para jogos">-</button>
+                                <span class="count" role="status" aria-live="polite">1</span>
+                                <button class="counter-btn plus" aria-label="Aumentar quantidade de dispositivos para jogos">+</button>
+                                <span class="label">Dispositivos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <div class="card-icon music" aria-hidden="true">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Streaming de Música</h3>
+                            <p>Spotify, Deezer</p>
+                            <div class="device-counter">
+                                <button class="counter-btn minus" aria-label="Diminuir quantidade de dispositivos para música">-</button>
+                                <span class="count" role="status" aria-live="polite">2</span>
+                                <button class="counter-btn plus" aria-label="Aumentar quantidade de dispositivos para música">+</button>
+                                <span class="label">Dispositivos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="result-section" id="resultSection">
+                <h2>Velocidade Recomendada</h2>
+                <p class="result-text">Com base nas informações que você selecionou, seu plano de internet ideal deve ter pelo menos:</p>
+                
+                <div class="donut-chart-container" role="img" aria-label="Gráfico de velocidade recomendada">
+                    <div class="donut-chart">
+                        <div class="donut-center">
+                            <span class="speed-value" aria-live="polite">54</span>
+                            <span class="speed-unit">MEGAS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speed-breakdown" role="list">
+                    <h3>Distribuição de Velocidade</h3>
+                    <div class="breakdown-item social" role="listitem">
+                        <span class="dot" aria-hidden="true"></span>
+                        <span class="text">9.25% ou seja 5 megas com Redes sociais</span>
+                    </div>
+                    <div class="breakdown-item streaming" role="listitem">
+                        <span class="dot" aria-hidden="true"></span>
+                        <span class="text">27.04% ou seja 15 megas com Streaming de Vídeo</span>
+                    </div>
+                    <div class="breakdown-item gaming" role="listitem">
+                        <span class="dot" aria-hidden="true"></span>
+                        <span class="text">37.04% ou seja 20 megas Online Multiplayer</span>
+                    </div>
+                    <div class="breakdown-item music" role="listitem">
+                        <span class="dot" aria-hidden="true"></span>
+                        <span class="text">26.67% ou seja 14 megas com Streaming de Música</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="disclaimer">
+                <p>*Termos sujeitos da AS MEGAS (leia abaixo) antes serem disponíveis no seu endereço.</p>
+                <button class="ver-planos-btn" aria-label="Ver planos disponíveis">
+                    <i class="fas fa-search"></i>
+                    VER PLANOS
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
